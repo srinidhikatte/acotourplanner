@@ -9,6 +9,7 @@ Refer to following papers for better understanding of Ant colony optimization
 As we know, in travelling salesman problem, we start from a source and we need to visit different cities and return back to source in optimized way. Our application can be used for the following use cases
 1. Delivery agent starting from a warehouse need to deliver items to multiple locations and return back to warehouse 
 2. Person starting from his house need to visit multiple locations to invite friends/relatives for a function.
+
 Using the various APIs provided by Google maps/AWS and ArcGIS, we have deployed a website developed using Python Flask that takes a user’s starting position as well as the locations that they want to visit as input and as an output provides the optimal path the user should take to minimize time. This path is based on the real time traffic conditions.
 
 You can use either Google maps or AWS location services for getting real time traffic data. We strongly recommend using Google maps service as we found it is more fast,accurate and useful than AWS location services
