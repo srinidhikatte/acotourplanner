@@ -1,0 +1,90 @@
+<!--
+
+To run this demo, you need to replace 'YOUR_API_KEY' with an API key from the ArcGIS Developers dashboard.
+
+Sign up for a free account and get an API key.
+
+https://developers.arcgis.com/documentation/mapping-apis-and-services/get-started/
+
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Tour Planner using Ant Colony optimisation</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 80%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.25/"></script>
+
+    <script>
+      //const fs = require('fs')
+      //var nodes = [];
+      require(["esri/config", "esri/Map", "esri/views/MapView", "esri/widgets/Search"], function(esriConfig, Map, MapView, Search) {
+
+        esriConfig.apiKey = "AAPK7d848e5aa32e4934bb1a120ef4563fc64ZM0utCWKT9wsk5B0cCd-Zz7DapDlFlQrgCIHOpqP2lDLK2vIrib1D9a2zFyFXTa";
+
+        const map = new Map({
+          basemap: "arcgis-navigation" // Basemap layer service
+        });
+
+        const view = new MapView({
+          map: map,
+          center: [77.216721,28.644800],
+          zoom: 6,
+          container: "viewDiv" // Div element
+        });
+          const search = new Search({  //Add Search widget
+        view: view
+        });
+
+        view.ui.add(search, "top-right"); //Add to the map
+        search.on("select-result", function(event){
+        //console.log("The selected search result: ", event);
+        var x = event;
+		
+		document.getElementById("mylink").innerHTML=x.result.name;
+        //nodes.push(x.result.name);
+        //console.log(nodes)
+        //fs.writeFile('Output.txt', data, (err) => {
+          
+        // In case of a error throw err.
+        //if (err) throw err;
+  //  })
+      });
+        //var x =Search.get(searchTerm);
+
+        //var divContents = document.getElementById("viewDiv").innerHTML;
+
+      });
+    </script>
+	
+
+
+
+  </head>
+  <body>
+  <h2> Welcome to Tour Planner</h2>
+  <h3> Optimised tour plan is developed using Ant colony optimisation technique<h3>
+  <p> Enter source first followed by other places </p>
+  <form action="home" method="post">
+    <div id="viewDiv"></div>
+        <textarea name="mylink" id="mylink"></textarea>
+	<p><input type = "submit" value = "Submit" /></p>
+	</form>
+  <p style="background-color:powderblue;border: 2px solid black; width:150"><a href="/tour_planner">Plan my tour</a></p>
+  <br>
+  
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Tour Planner using Ant Colony Optimization</title>
+
+<style>
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Your Tour plan is ready!</h2>
+<h3>Optimized tour travel time based on current traffic conditions is {{ttime}} minutes</h3>
+<table>
+  {%for row in results%}
+     <tr>
+        {%for col in row%}
+          <td>{{col}}</td>
+        {%endfor%}
+     </tr>
+  {%endfor%}
+</table>
+<br>
+  <p style="background-color:powderblue;border: 2px solid black;"><a href="/home">Go to Home</a></p>
+
+</body>
+
+</html>
+
+
