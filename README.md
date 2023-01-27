@@ -21,7 +21,7 @@ Steps
 2. Enable Distance matrix API for your created project. Refer - https://developers.google.com/maps/documentation/distance-matrix/cloud-setup
 3. Copy the obtained key to the file keyfile.txt
 4. Use nohup python3 app.py & to run application. This code will use Google maps service for fetching real time traffic data.
-5. Access app on web browser through http://<hostname>:5000/home
+5. Access app on web browser through http://hostname:5000/home
 
  *Using AWS location services
 
@@ -29,6 +29,6 @@ Steps
 1. You need to have active AWS account. Refer - https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html
 2. Download and configure aws cli on the server . Refer - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 3. Use nohup python3 app_aws.py & to run application. This code will use Google maps service for fetching real time traffic data.
-4. Access app on web browser through http://<hostname>:5000/home
+4. Access app on web browser through http://hostname:5000/home
 
 
