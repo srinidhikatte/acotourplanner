@@ -23,12 +23,12 @@ Steps
 4. Use nohup python3 app.py & to run application. This code will use Google maps service for fetching real time traffic data.
 5. Access app on web browser through http://hostname:5000/home
 
- *Using AWS location services
+* Using AWS location services
 
 Steps
 1. You need to have active AWS account. Refer - https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html
 2. Download and configure aws cli on the server . Refer - https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-3. Use nohup python3 app_aws.py & to run application. This code will use Google maps service for fetching real time traffic data.
+3. Use nohup python3 app_aws.py & to run application. This code will use AWS Geolocation service for fetching real time traffic data.
 4. Access app on web browser through http://hostname:5000/home
 
 
